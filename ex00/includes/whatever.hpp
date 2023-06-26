@@ -6,7 +6,7 @@
 /*   By: mcatal-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/25 14:37:39 by mcatal-d          #+#    #+#             */
-/*   Updated: 2023/06/25 14:54:39 by mcatal-d         ###   ########.fr       */
+/*   Updated: 2023/06/26 10:48:59 by mcatal-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,11 @@ void swap (T &a, T &b)
     b = temp;
 }
 
-template< typename T >
-T min(T a, T b)
+template< typename T > 
+T min(T a, T b) 
 {return (a < b) ? a : b;}
 
-template< typename T >
+template< typename T > 
 T max(T a, T b)
 {return (a > b) ? a : b;}
 
