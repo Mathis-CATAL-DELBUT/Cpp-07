@@ -6,7 +6,7 @@
 /*   By: mcatal-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/26 12:53:28 by mcatal-d          #+#    #+#             */
-/*   Updated: 2023/06/26 15:21:34 by mcatal-d         ###   ########.fr       */
+/*   Updated: 2023/06/26 15:25:55 by mcatal-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,9 @@ class Array
     private:
         T* array;
         unsigned int _size;
+        
+        
+        
     public:
         Array()
         {
@@ -30,6 +33,8 @@ class Array
         {
             array = new T [n];
             _size = n;
+            for (unsigned int i = 0; i < _size; i++)
+                array[i] = T();
         }
         Array(Array const &copy) : _size(copy._size)
         {
@@ -61,15 +66,15 @@ class Array
             throw InvalidIndexException();
         }
     
-    public:
-        unsigned int size(void) const
-        {return _size;}
-    class InvalidIndexException : public std::exception
-    {
         public:
-            virtual const char* what() const throw()
-            {return ("Invalid index");}
-    };      
+            unsigned int size(void) const
+            {return _size;}
+        class InvalidIndexException : public std::exception
+        {
+            public:
+                virtual const char* what() const throw()
+                {return ("Invalid index");}
+        };      
 };
 
 #endif
